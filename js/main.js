@@ -18,36 +18,13 @@ toggleIcon.onclick = ()=>{
     toggleMenu.classList.toggle("in")
 }
 
+
 // dynamic heigth of main section
 const main = document.getElementsByTagName("main");
 let vh = window.innerHeight;
 
-main[0].style.minHeight = `${vh-88}px`
+main[0].style.minHeight = `${vh-108}px`
 window.addEventListener("resize", ()=>{
     vh = window.innerHeight;
     main[0].style.minHeight = `${vh-88}px`
 })
-
-// switch dark and light mode
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-    else {        document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-    }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);

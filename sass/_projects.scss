@@ -1,0 +1,112 @@
+.projects {
+  padding: 70px 0;
+  .container {
+    position: relative;
+  }
+  .view-all {
+    position: absolute;
+    right: 30px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    color: #12ca72;
+    font-size: 24px;
+    z-index: 4;
+    display: block;
+  }
+  #news-slider {
+    padding-top: 80px;
+    .post-slide {
+      margin: 20px 30px 20px;
+      padding-top: 1px;
+      .post-img {
+        border-radius: 30px;
+        margin: -12px 0px 8px 0;
+        overflow: hidden;
+        position: relative;
+        min-height: 350px;
+        background: #2fb4ae;
+        img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          bottom: -20px;
+          left: 20px;
+          transition: all 0.4s ease-in-out;
+          transform: rotate(-15deg) scale(1.2) translateY(0);
+        }
+      }
+      &:hover {
+        .post-img img {
+          transform: rotate(-15deg) scale(1.2) translateY(-10px);
+        }
+        .over-layer {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+      .over-layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: linear-gradient(-45deg, #12ca72b8 0%, #810c257d 100%);
+        transition: all 0.5s linear;
+        i {
+          position: relative;
+          top: 45%;
+          text-align: center;
+          display: block;
+          color: #fff;
+          font-size: 25px;
+        }
+      }
+    }
+    .owl-nav {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      button {
+        padding: 0 !important;
+        position: relative;
+      }
+      .owl-prev {
+        margin-right: 10px;
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-image: url("../imgs/arrow-left.png");
+          background-size: contain;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      .owl-next {
+        position: relative;
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-image: url("../imgs/arrow-right.png");
+          background-size: contain;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next {
+    width: 50px;
+    height: 50px;
+    padding-top: 4px !important;
+    span {
+      display: none;
+    }
+  }
+}

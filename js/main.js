@@ -18,7 +18,6 @@ toggleIcon.onclick = ()=>{
     toggleMenu.classList.toggle("in")
 }
 
-
 // dynamic heigth of main section
 const main = document.getElementsByTagName("main");
 let vh = window.innerHeight;

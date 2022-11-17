@@ -13,7 +13,10 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 10px; }
+  padding: 0 15px; }
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 50px; } }
 
 a {
   text-decoration: none; }
@@ -23,9 +26,15 @@ img {
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 .rotate {
   -webkit-animation: spin 4s linear infinite;
@@ -107,6 +116,9 @@ nav {
                 nav .nav-container .right-side .links ul li.lang span.active {
                   top: 0;
                   left: 50%;
+                  -webkit-transform: translateX(-50%);
+                  -moz-transform: translateX(-50%);
+                  -o-transform: translateX(-50%);
                   transform: translateX(-50%);
                   width: auto;
                   height: auto; }
@@ -122,3 +134,105 @@ nav {
           display: none; } }
       nav .nav-container .toggle img {
         width: 35px; }
+
+footer .grid {
+  overflow: hidden; }
+  @media (min-width: 991px) {
+    footer .grid {
+      display: flex; } }
+  footer .grid .col {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center; }
+    @media (min-width: 600px) {
+      footer .grid .col {
+        float: left; }
+        footer .grid .col.sm-col {
+          width: 33.33%; } }
+    @media (min-width: 991px) {
+      footer .grid .col {
+        text-align: inherit;
+        margin-right: 50px; }
+        footer .grid .col.sm-col {
+          width: auto; } }
+    @media (min-width: 1100px) {
+      footer .grid .col {
+        margin-right: 80px; } }
+    footer .grid .col:last-of-type {
+      margin-bottom: 0; }
+      @media (min-width: 991px) {
+        footer .grid .col:last-of-type {
+          margin-right: 0; } }
+      footer .grid .col:last-of-type .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px; }
+        @media (min-width: 991px) {
+          footer .grid .col:last-of-type .socials {
+            justify-content: initial; } }
+        footer .grid .col:last-of-type .socials > div {
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          line-height: 60px;
+          margin: 0 15px;
+          border-radius: 100px;
+          -webkit-box-shadow: 1px 1px 7px #ccc, -1px -1px 7px #ccc;
+          -moz-box-shadow: 1px 1px 7px #ccc, -1px -1px 7px #ccc;
+          -o-box-shadow: 1px 1px 7px #ccc, -1px -1px 7px #ccc;
+          box-shadow: 1px 1px 7px #ccc, -1px -1px 7px #ccc; }
+          @media (min-width: 991px) {
+            footer .grid .col:last-of-type .socials > div:first-of-type {
+              margin-left: 0; } }
+          footer .grid .col:last-of-type .socials > div > a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0; }
+          footer .grid .col:last-of-type .socials > div img {
+            height: 20px; }
+      footer .grid .col:last-of-type .downloads {
+        text-align: center; }
+        @media (min-width: 991px) {
+          footer .grid .col:last-of-type .downloads {
+            text-align: initial; } }
+        footer .grid .col:last-of-type .downloads a {
+          display: inline; }
+        footer .grid .col:last-of-type .downloads img {
+          width: 140px;
+          margin-bottom: 5px; }
+    footer .grid .col p {
+      font-size: 13px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      color: #5e6282; }
+    footer .grid .col h3 {
+      font-size: 21px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      margin-top: 0; }
+    footer .grid .col h4 {
+      font-size: 20px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      color: #5e6282;
+      text-align: center;
+      margin-bottom: 15px; }
+      @media (min-width: 991px) {
+        footer .grid .col h4 {
+          text-align: initial; } }
+    footer .grid .col a {
+      display: block;
+      margin-top: 5px;
+      font-size: 18px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500; }
+
+footer .copyrights {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #5e6282;
+  padding: 15px 0; }

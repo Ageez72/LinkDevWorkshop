@@ -1,0 +1,89 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  padding-top: 108px;
+  * {
+    box-sizing: border-box;
+  }
+}
+.container {
+  // width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
+}
+a {
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+.extraHugeTitle {
+  font-size: 40px;
+  font-family: "Volkhov", serif;
+  font-weight: 700;
+  color: #181e4b;
+}
+.hugeTitle {
+  font-size: 55px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #253776;
+}
+.largeTitle {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #14183e;
+}
+.sectionTitle {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #5e6282;
+}
+@mixin orangeBtn {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ff7c16;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: #ff7c16a8;
+  }
+}
+img {
+  max-width: 100%;
+}
+.decore-img {
+  position: absolute;
+  top: -245px;
+  left: 64%;
+  z-index: 7;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.purple {
+  color: $purple;
+}
+.green {
+  color: $green;
+}
+.orange {
+  color: $orange;
+}

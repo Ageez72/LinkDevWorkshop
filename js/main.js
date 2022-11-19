@@ -1,5 +1,5 @@
+// set a background for navbar on scrolling
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementsByTagName('nav')[0].style.background = "#fff";
@@ -7,6 +7,10 @@ function scrollFunction() {
     document.getElementsByTagName('nav')[0].style.background = "transparent";
   }
 }
+// change language
+$('.lang span').click(function(e) {
+    $(this).removeClass('active').siblings().addClass('active');
+  });
 // add in class to show navbar on mobile
 const toggleMenu = document.querySelector(".right-side");
 const toggleIcon = document.querySelector(".toggle img");

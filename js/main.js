@@ -18,7 +18,7 @@ toggleIcon.onclick = ()=>{
     toggleMenu.classList.toggle("in")
 }
 // (on click) add active class on banner elements
-let el = document.querySelectorAll('.carousel-indicators button');
+let el = document.querySelectorAll('.carousel-indicators span');
 let mainContainers = document.querySelectorAll('.main-container');
 let decoreImgs = document.querySelectorAll('.decore-img');
 for (let i = 0; i < el.length; i++) {

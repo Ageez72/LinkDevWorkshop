@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&family=Volkhov:wght@700&display=swap");
 .test {
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -125,9 +124,11 @@ nav {
         nav .nav-container .logo {
           width: 16%; } }
       nav .nav-container .logo img {
-        width: 100%; }
+        width: 100%;
+        height: auto; }
         @media (min-width: 650px) {
           nav .nav-container .logo img {
+            width: 190px;
             height: 72px; } }
     nav .nav-container .right-side {
       display: flex;
@@ -183,7 +184,9 @@ nav {
             nav .nav-container .right-side .links ul li.sign-in {
               border: 1px solid #212832;
               border-radius: 5px;
-              padding: 0; }
+              padding: 0;
+              width: 80%;
+              margin: auto; }
               nav .nav-container .right-side .links ul li.sign-in a {
                 width: 100%;
                 height: 100%;
@@ -200,6 +203,9 @@ nav {
                 nav .nav-container .right-side .links ul li.lang span.active {
                   opacity: 1;
                   display: inline-block; }
+                nav .nav-container .right-side .links ul li.lang span img {
+                  width: 10px;
+                  height: 6px; }
     nav .nav-container .toggle {
       width: 10%;
       cursor: pointer;
@@ -211,7 +217,8 @@ nav {
         nav .nav-container .toggle {
           display: none; } }
       nav .nav-container .toggle img {
-        width: 35px; }
+        width: 35px;
+        height: 38px; }
 
 main .container {
   position: relative;
@@ -249,16 +256,17 @@ main .main-container {
       main .main-container .main-content .extraHugeTitle::before {
         content: "";
         position: absolute;
+        top: 22px;
         right: 0;
-        top: 35px;
         width: 300px;
         height: 12px;
         z-index: -1; }
-        @media (min-width: 660px) {
+        @media (min-width: 600px) {
           main .main-container .main-content .extraHugeTitle::before {
-            right: 140px; } }
-        @media (min-width: 991px) {
+            top: 30px; } }
+        @media (min-width: 1206px) {
           main .main-container .main-content .extraHugeTitle::before {
+            top: 45px;
             right: 35px; } }
       main .main-container .main-content .extraHugeTitle.purple-line::before {
         background-image: url("../imgs/banner/purpleLine.png"); }
@@ -278,7 +286,7 @@ main .main-container {
       display: flex;
       flex-wrap: wrap; }
       main .main-container .main-content .btns .findOut {
-        color: #fff;
+        color: #000;
         font-size: 18px;
         font-weight: 500;
         font-family: "Open Sans", sans-serif;
@@ -311,6 +319,9 @@ main .main-container {
           border-radius: 100px;
           display: inline-block;
           margin-right: 10px; }
+          main .main-container .main-content .btns .playDemo .video-btn img {
+            width: 15px;
+            height: 15px; }
   main .main-container .main-traveler {
     position: relative;
     -webkit-animation: bannerImgFromLeft 0.8s forwards;
@@ -348,7 +359,7 @@ main .carousel-indicators {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1; }
-  main .carousel-indicators button {
+  main .carousel-indicators span {
     width: 40px;
     height: 40px;
     border: none;
@@ -358,13 +369,13 @@ main .carousel-indicators {
     z-index: 2;
     border: 2px solid #fff;
     transition: all 0.3s ease-in-out; }
-    main .carousel-indicators button#purple {
+    main .carousel-indicators span#purple {
       background-color: #f215b6; }
-    main .carousel-indicators button#green {
+    main .carousel-indicators span#green {
       background-color: #a6e51c; }
-    main .carousel-indicators button#orange {
+    main .carousel-indicators span#orange {
       background-color: #ff7c16; }
-    main .carousel-indicators button.active {
+    main .carousel-indicators span.active {
       -webkit-transform: scale(1.15);
       -moz-transform: scale(1.15);
       -o-transform: scale(1.15);
@@ -444,7 +455,7 @@ main .carousel-indicators {
           width: 60%;
           flex-direction: row-reverse;
           flex-wrap: initial; } }
-      .services .service-content .service-content_items .service-item.first h5 {
+      .services .service-content .service-content_items .service-item.first h3 {
         bottom: 20%; }
       .services .service-content .service-content_items .service-item.first a {
         bottom: 20px; }
@@ -462,7 +473,7 @@ main .carousel-indicators {
         .services .service-content .service-content_items .service-item > img {
           width: 250px;
           height: 250px; }
-        .services .service-content .service-content_items .service-item h5 {
+        .services .service-content .service-content_items .service-item h3 {
           position: absolute;
           bottom: 25%;
           left: 50%;
@@ -488,6 +499,8 @@ main .carousel-indicators {
           opacity: 0;
           width: 100%; }
           .services .service-content .service-content_items .service-item a img {
+            width: 18px;
+            height: 12px;
             margin-right: 10px; }
         .services .service-content .service-content_items .service-item .overlay {
           position: absolute;
@@ -550,7 +563,7 @@ main .carousel-indicators {
         margin-right: 0; }
     .top-news .category-wrapper [type="radio"]:checked + label {
       background: #13beff;
-      color: #fff; }
+      color: #000; }
     .top-news .category-wrapper [type="radio"]:nth-of-type(2):checked ~ .gallery .card:not(.technology),
     .top-news .category-wrapper [type="radio"]:nth-of-type(3):checked ~ .gallery .card:not(.sport),
     .top-news .category-wrapper [type="radio"]:nth-of-type(4):checked ~ .gallery .card:not(.health),
@@ -664,7 +677,7 @@ main .carousel-indicators {
                     height: auto;
                     margin: 0; }
     .top-news .category-wrapper .view-more {
-      color: #fff;
+      color: #000;
       font-size: 18px;
       font-weight: 500;
       font-family: "Open Sans", sans-serif;
@@ -788,7 +801,8 @@ footer .grid {
       margin-top: 5px;
       font-size: 18px;
       font-family: "Poppins", sans-serif;
-      font-weight: 500; }
+      font-weight: 500;
+      color: #5e6282; }
 
 footer .copyrights {
   text-align: center;
